@@ -1,0 +1,507 @@
+{
+  "actions": [
+    {
+      "action": "update",
+      "module": "fsevents",
+      "depth": 3,
+      "target": "1.2.9",
+      "resolves": [
+        {
+          "id": 534,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>debug",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 612,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>rc>deep-extend",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 803,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>tar",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 803,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>tar",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 606,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>request>http-signature>sshpk",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 525,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>request>tough-cookie",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 566,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>hawk>boom>hoek",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 566,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>hawk>cryptiles>boom>hoek",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 566,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>hawk>hoek",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 566,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>hawk>sntp>hoek",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 566,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>request>hawk>boom>hoek",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 566,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>request>hawk>cryptiles>boom>hoek",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 566,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>request>hawk>hoek",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 566,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>request>hawk>sntp>hoek",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 664,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>request>stringstream",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 886,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>tar>fstream",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 886,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>fstream",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 886,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>fstream-ignore>fstream",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        },
+        {
+          "id": 886,
+          "path": "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>tar>fstream",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ]
+    }
+  ],
+  "advisories": {
+    "525": {
+      "findings": [
+        {
+          "version": "2.3.2",
+          "paths": [
+            "nodemon>chokidar>fsevents>node-pre-gyp>request>tough-cookie"
+          ],
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ],
+      "id": 525,
+      "created": "2017-09-08T18:07:02.061Z",
+      "updated": "2019-06-24T14:57:19.055Z",
+      "deleted": null,
+      "title": "Regular Expression Denial of Service",
+      "found_by": {
+        "name": "Cristian-Alexandru Staicu"
+      },
+      "reported_by": {
+        "name": "Cristian-Alexandru Staicu"
+      },
+      "module_name": "tough-cookie",
+      "cves": [
+        "CVE-2017-15010"
+      ],
+      "vulnerable_versions": "<2.3.3",
+      "patched_versions": ">=2.3.3",
+      "overview": "Affected versions of `tough-cookie` are susceptible to a regular expression denial of service.\n\nThe amplification on this vulnerability is relatively low - it takes around 2 seconds for the engine to execute on a malicious input which is 50,000 characters in length.\n\nIf node was compiled using the `-DHTTP_MAX_HEADER_SIZE` however, the impact of the vulnerability can be significant, as the primary limitation for the vulnerability is the default max HTTP header length in node.",
+      "recommendation": "Update to version 2.3.3 or later.",
+      "references": "- [Issue #92](https://github.com/salesforce/tough-cookie/issues/92)",
+      "access": "public",
+      "severity": "high",
+      "cwe": "CWE-400",
+      "metadata": {
+        "module_type": "Network.Library",
+        "exploitability": 5,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/525"
+    },
+    "534": {
+      "findings": [
+        {
+          "version": "2.6.8",
+          "paths": [
+            "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>debug"
+          ],
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ],
+      "id": 534,
+      "created": "2017-09-25T18:55:55.956Z",
+      "updated": "2018-05-16T19:37:43.686Z",
+      "deleted": null,
+      "title": "Regular Expression Denial of Service",
+      "found_by": {
+        "name": "Cristian-Alexandru Staicu"
+      },
+      "reported_by": {
+        "name": "Cristian-Alexandru Staicu"
+      },
+      "module_name": "debug",
+      "cves": [
+        "CVE-2017-16137"
+      ],
+      "vulnerable_versions": "<= 2.6.8 || >= 3.0.0 <= 3.0.1",
+      "patched_versions": ">= 2.6.9 < 3.0.0 || >= 3.1.0",
+      "overview": "Affected versions of `debug` are vulnerable to regular expression denial of service when untrusted user input is passed into the `o` formatter. \n\nAs it takes 50,000 characters to block the event loop for 2 seconds, this issue is a low severity issue.",
+      "recommendation": "Version 2.x.x: Update to version 2.6.9 or later.\nVersion 3.x.x: Update to version 3.1.0 or later.\n",
+      "references": "- [Issue #501](https://github.com/visionmedia/debug/issues/501)\n- [PR #504](https://github.com/visionmedia/debug/pull/504)",
+      "access": "public",
+      "severity": "low",
+      "cwe": "CWE-400",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 5,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/534"
+    },
+    "566": {
+      "findings": [
+        {
+          "version": "2.16.3",
+          "paths": [
+            "nodemon>chokidar>fsevents>node-pre-gyp>hawk>boom>hoek",
+            "nodemon>chokidar>fsevents>node-pre-gyp>hawk>cryptiles>boom>hoek",
+            "nodemon>chokidar>fsevents>node-pre-gyp>hawk>hoek",
+            "nodemon>chokidar>fsevents>node-pre-gyp>hawk>sntp>hoek",
+            "nodemon>chokidar>fsevents>node-pre-gyp>request>hawk>boom>hoek",
+            "nodemon>chokidar>fsevents>node-pre-gyp>request>hawk>cryptiles>boom>hoek",
+            "nodemon>chokidar>fsevents>node-pre-gyp>request>hawk>hoek",
+            "nodemon>chokidar>fsevents>node-pre-gyp>request>hawk>sntp>hoek"
+          ],
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ],
+      "id": 566,
+      "created": "2018-04-20T21:25:58.421Z",
+      "updated": "2019-06-19T20:16:59.758Z",
+      "deleted": null,
+      "title": "Prototype Pollution",
+      "found_by": {
+        "name": "HoLyVieR"
+      },
+      "reported_by": {
+        "name": "HoLyVieR"
+      },
+      "module_name": "hoek",
+      "cves": [
+        "CVE-2018-3728"
+      ],
+      "vulnerable_versions": "<= 4.2.0 || >= 5.0.0 < 5.0.3",
+      "patched_versions": "> 4.2.0 < 5.0.0 || >= 5.0.3",
+      "overview": "Versions of `hoek` prior to 4.2.1 and 5.0.3 are vulnerable to prototype pollution.\n\nThe `merge` function, and the `applyToDefaults` and `applyToDefaultsWithShallow` functions which leverage `merge` behind the scenes, are vulnerable to a prototype pollution attack when provided an _unvalidated_ payload created from a JSON string containing the `__proto__` property.\n\nThis can be demonstrated like so:\n\n```javascript\nvar Hoek = require('hoek');\nvar malicious_payload = '{\"__proto__\":{\"oops\":\"It works !\"}}';\n\nvar a = {};\nconsole.log(\"Before : \" + a.oops);\nHoek.merge({}, JSON.parse(malicious_payload));\nconsole.log(\"After : \" + a.oops);\n```\n\nThis type of attack can be used to overwrite existing properties causing a potential denial of service.",
+      "recommendation": "Update to version 4.2.1, 5.0.3 or later.",
+      "references": "- [HackerOne Report](https://hackerone.com/reports/310439)",
+      "access": "public",
+      "severity": "moderate",
+      "cwe": "CWE-471",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 5,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/566"
+    },
+    "606": {
+      "findings": [
+        {
+          "version": "1.13.0",
+          "paths": [
+            "nodemon>chokidar>fsevents>node-pre-gyp>request>http-signature>sshpk"
+          ],
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ],
+      "id": 606,
+      "created": "2018-04-24T22:25:08.333Z",
+      "updated": "2018-09-07T17:39:16.549Z",
+      "deleted": null,
+      "title": "Regular Expression Denial of Service",
+      "found_by": {
+        "name": "Сковорода Никита Андреевич"
+      },
+      "reported_by": {
+        "name": "Сковорода Никита Андреевич"
+      },
+      "module_name": "sshpk",
+      "cves": [
+        "CVE-2018-3737"
+      ],
+      "vulnerable_versions": "<1.13.2 || >=1.14.0 <1.14.1",
+      "patched_versions": ">=1.13.2 < 1.14.0 || >=1.14.1",
+      "overview": "Versions of `sshpk` before 1.13.2 or 1.14.1 are vulnerable to regular expression denial of service when parsing crafted invalid public keys.",
+      "recommendation": "Update to version 1.13.2, 1.14.1 or later.",
+      "references": "- https://github.com/joyent/node-sshpk/blob/v1.13.1/lib/formats/ssh.js#L17\n- [HackerOne Report](https://hackerone.com/reports/319593)\n- https://github.com/joyent/node-sshpk/commit/46065d38a5e6d1bccf86d3efb2fb83c14e3f9957",
+      "access": "public",
+      "severity": "high",
+      "cwe": "CWE-400",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 5,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/606"
+    },
+    "612": {
+      "findings": [
+        {
+          "version": "0.4.2",
+          "paths": [
+            "nodemon>chokidar>fsevents>node-pre-gyp>rc>deep-extend"
+          ],
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ],
+      "id": 612,
+      "created": "2018-04-24T23:13:13.134Z",
+      "updated": "2018-05-08T01:46:15.050Z",
+      "deleted": null,
+      "title": "Prototype Pollution",
+      "found_by": {
+        "name": "Olivier Arteau (HoLyVieR)"
+      },
+      "reported_by": {
+        "name": "Olivier Arteau (HoLyVieR)"
+      },
+      "module_name": "deep-extend",
+      "cves": [],
+      "vulnerable_versions": "<=0.5.0",
+      "patched_versions": ">=0.5.1",
+      "overview": "Versions of `deep-extend` before 0.5.1 are vulnerable to prototype pollution.",
+      "recommendation": "Update to version 0.5.1 or later.",
+      "references": "- [HackerOne Report](https://hackerone.com/reports/311333)",
+      "access": "public",
+      "severity": "low",
+      "cwe": "CWE-471",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 2,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/612"
+    },
+    "664": {
+      "findings": [
+        {
+          "version": "0.0.5",
+          "paths": [
+            "nodemon>chokidar>fsevents>node-pre-gyp>request>stringstream"
+          ],
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ],
+      "id": 664,
+      "created": "2018-05-16T19:39:37.463Z",
+      "updated": "2018-05-22T15:03:12.999Z",
+      "deleted": null,
+      "title": "Out-of-bounds Read",
+      "found_by": {
+        "name": "Сковорода Никита Андреевич"
+      },
+      "reported_by": {
+        "name": "Сковорода Никита Андреевич"
+      },
+      "module_name": "stringstream",
+      "cves": [],
+      "vulnerable_versions": "<=0.0.5",
+      "patched_versions": ">=0.0.6",
+      "overview": "All versions of `stringstream` are vulnerable to out-of-bounds read as it allocates uninitialized Buffers when number is passed in input stream on Node.js 4.x and below.",
+      "recommendation": "No fix is currently available for this vulnerability. It is our recommendation to not install or use this module if user input is being passed in to `stringstream`.\n",
+      "references": "- [HackerOne Report](https://hackerone.com/reports/321670)\n- https://github.com/mhart/StringStream/blob/v0.0.5/stringstream.js#L32",
+      "access": "public",
+      "severity": "moderate",
+      "cwe": "CWE-125",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 2,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/664"
+    },
+    "803": {
+      "findings": [
+        {
+          "version": "2.2.1",
+          "paths": [
+            "nodemon>chokidar>fsevents>node-pre-gyp>tar",
+            "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>tar"
+          ],
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ],
+      "id": 803,
+      "created": "2019-04-04T03:31:56.572Z",
+      "updated": "2019-05-15T14:13:58.612Z",
+      "deleted": null,
+      "title": "Arbitrary File Overwrite",
+      "found_by": {
+        "link": "",
+        "name": "Max Justicz"
+      },
+      "reported_by": {
+        "link": "",
+        "name": "Max Justicz"
+      },
+      "module_name": "tar",
+      "cves": [],
+      "vulnerable_versions": "<2.2.2 || >=3.0.0 <4.4.2",
+      "patched_versions": ">=2.2.2 <3.0.0 || >=4.4.2",
+      "overview": "Versions of `tar` prior to 4.4.2 for 4.x and 2.2.2 for 2.x are vulnerable to Arbitrary File Overwrite. Extracting tarballs containing a hardlink to a file that already exists in the system, and a file that matches the hardlink will overwrite the system's file with the contents of the extracted file.",
+      "recommendation": "For tar 4.x, upgrade to version 4.4.2 or later.\nFor tar 2.x, upgrade to version 2.2.2 or later.",
+      "references": "- [HackerOne Report](https://hackerone.com/reports/344595)",
+      "access": "public",
+      "severity": "high",
+      "cwe": "CWE-59",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 5,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/803"
+    },
+    "886": {
+      "findings": [
+        {
+          "version": "1.0.11",
+          "paths": [
+            "nodemon>chokidar>fsevents>node-pre-gyp>tar>fstream",
+            "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>fstream",
+            "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>fstream-ignore>fstream",
+            "nodemon>chokidar>fsevents>node-pre-gyp>tar-pack>tar>fstream"
+          ],
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ],
+      "id": 886,
+      "created": "2019-05-15T14:22:26.820Z",
+      "updated": "2019-07-17T20:46:09.777Z",
+      "deleted": null,
+      "title": "Arbitrary File Overwrite",
+      "found_by": {
+        "link": "",
+        "name": "Max Justicz"
+      },
+      "reported_by": {
+        "link": "",
+        "name": "Max Justicz"
+      },
+      "module_name": "fstream",
+      "cves": [
+        "CVE-2019-13173"
+      ],
+      "vulnerable_versions": "<1.0.12",
+      "patched_versions": ">=1.0.12",
+      "overview": "Versions of `fstream` prior to 1.0.12 are vulnerable to Arbitrary File Overwrite. Extracting tarballs containing a hardlink to a file that already exists in the system and a file that matches the hardlink will overwrite the system's file with the contents of the extracted file. The `fstream.DirWriter()` function is vulnerable.",
+      "recommendation": "Upgrade to version 1.0.12 or later.",
+      "references": "- [GitHub Commit](https://github.com/npm/fstream/commit/6a77d2fa6e1462693cf8e46f930da96ec1b0bb22)",
+      "access": "public",
+      "severity": "high",
+      "cwe": "CWE-59",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 5,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/886"
+    }
+  },
+  "muted": [],
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 2,
+      "moderate": 9,
+      "high": 8,
+      "critical": 0
+    },
+    "dependencies": 117,
+    "devDependencies": 892530,
+    "optionalDependencies": 11847,
+    "totalDependencies": 892647
+  },
+  "runId": "f14251bc-d45d-40e6-9962-dfe096f95d62"
+}
